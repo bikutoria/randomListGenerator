@@ -40,8 +40,13 @@ for _ in range(300):
 # Get the desktop directory
 desktop_path = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
 
+# Get the current timestamp
+current_timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+# Create the string variable
+filename = f"random_data_{current_timestamp}.csv"
+
 # Specify the CSV file path on the desktop
-csv_file_path = os.path.join(desktop_path, 'random_data.csv')
+csv_file_path = os.path.join(desktop_path, filename)
 
 # Write to CSV file
 with open(csv_file_path, 'w', newline='') as csv_file:
